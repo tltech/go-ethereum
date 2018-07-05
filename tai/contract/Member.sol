@@ -55,7 +55,7 @@ contract Member {
         emit Vote(enode,msg.sender);
     }
 
-    function isMember(string enode) constant public returns (bool result){
+    function isMember(string enode) view public returns (bool result){
         result = false;
         if(votes[enode].ticketNum >= memberNum){
             result = true;
